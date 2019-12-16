@@ -2001,6 +2001,7 @@ input, select, textarea {
 
 		.hvr-grow {
 			display: inline-block;
+			text-decoration: underline;
 			vertical-align: middle;
 			-webkit-transform: perspective(1px) translateZ(0);
 			transform: perspective(1px) translateZ(0);
@@ -2036,6 +2037,10 @@ input, select, textarea {
 			border-top: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
 		}
+
+			.features section p {
+				color: rgb(231, 231, 231);	
+			}
 
 			.features section:nth-child(-n + 2) {
 				border-top-width: 0;
@@ -2589,18 +2594,18 @@ input, select, textarea {
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color: #b74e91;
+					color: #2e279d;
 				}
 
 				.wrapper.style3-alt .icon.major:before {
-					color: #953d75;
+					color: #2e279d;
 				}
 
 /* Image */
 
 	.image {
 		border-radius: 0.25em;
-		border: 0;
+		border: 2px;
 		display: inline-block;
 		position: relative;
 	}
@@ -3062,16 +3067,16 @@ input, select, textarea {
 				background: rgba(49, 36, 80, 0.9);
 				content: '';
 				display: block;
-				height: 100%;
+				/* height: 100%; */
 				left: 0;
 				opacity: 0;
 				position: absolute;
 				top: 0;
-				width: 100%;
+				/* width: 100%; */
 			}
 
 		.spotlights > section > .content {
-			padding: 4em 5em 2em 5em ;
+			padding: 4em 3em 2em 3em ;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3165,7 +3170,10 @@ input, select, textarea {
 			.spotlights > section > .content {
 				padding: 3em 2em 1em 2em ;
 			}
-
+		}
+		
+		.spotlights > section > .content > .inner > p{
+			color: rgb(231, 231, 231);
 		}
 
 /* Table */
@@ -3277,27 +3285,34 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-color: #2e279d;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #2e279d;
 		}
 
 		.wrapper.style2 {
-			background-color: #5571ee;
+			background-color: #4d80e4;
 		}
 
 		.wrapper.style2-alt {
-			background-color:#5571ee;
+			background-color:#4d80e4;
 		}
 
 		.wrapper.style3 {
-			background-color: #0766e2;
+			background-color: #46b3e6;
 		}
 
 		.wrapper.style3-alt {
-			background-color: #0766e2;
+			background-color: #46b3e6;
+		}
+
+		.wrapper.style4 {
+			background-color: #2e279d;
+		}
+		.wrapper.style4-alt {
+			background-color: #2e279d;
 		}
 
 		.wrapper.fullscreen {
@@ -3561,7 +3576,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #41b9ff;
+		background: #dff6f0;
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3774,7 +3789,7 @@ input, select, textarea {
 			-ms-transition: color 0.2s ease;
 			transition: color 0.2s ease;
 			border: 0;
-			color: rgba(255, 255, 255, 0.35);
+			color: rgba(0, 0, 0, 0.25);
 			display: block;
 			font-size: 0.6em;
 			font-weight: bold;
@@ -3814,11 +3829,11 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:hover {
-				color: rgba(255, 255, 255, 0.55);
+				color: rgba(0, 0, 0, 0.55);
 			}
 
 			#sidebar nav a.active {
-				color: #ffffff;
+				color: #000000;
 			}
 
 				#sidebar nav a.active:after {
@@ -3894,7 +3909,7 @@ input, select, textarea {
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color: #b74e91;
+							background-color: #084696;
 						}
 
 		}
@@ -3944,3 +3959,26 @@ input, select, textarea {
 			}
 
 		}
+
+		#profile-photo-wrapper {
+			text-align: center;
+			float: right;
+		}
+
+		img.profile-photo {
+		    height: 250px;
+			width: 250px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		
+
+/* About me secton */
+.style4 > .inner > p{
+	color: rgb(231, 231, 231);
+}
+
+.style4 > .inner > p > span{
+	text-decoration: underline;
+}
