@@ -3963,7 +3963,7 @@ input, select, textarea {
 		background-image: url("../../images/daniel-canada-best.jpg");
 		background-position: right center;;
 		background-repeat: no-repeat;
-		background-size: auto 100vh;
+		background-size: auto 110vh;
 		min-height: 100vh;
 		/* opacity: 0; */
 		transition: .5 ease;
@@ -3975,7 +3975,7 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
-			@media screen and (max-width: 980px) {
+			@media screen and (max-width: 1024px) {
 
 				#intro p br {
 					display: none;
