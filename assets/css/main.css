@@ -2567,7 +2567,7 @@ input, select, textarea {
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: #312450;
+			color: #005de7;
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
@@ -3040,6 +3040,7 @@ input, select, textarea {
 		-ms-flex-direction: row;
 		flex-direction: row;
 		min-height: 22.5em;
+		justify-content: space-between;
 	}
 
 		body.is-ie .spotlights > section {
@@ -3078,6 +3079,7 @@ input, select, textarea {
 
 		.spotlights > section > .content {
 			padding: 4em 3em 2em 3em ;
+			width: 70em;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3090,7 +3092,6 @@ input, select, textarea {
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
 			justify-content: center;
-			width: 50em;
 			-ms-flex: 1;
 		}
 
@@ -3104,6 +3105,8 @@ input, select, textarea {
 				-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 				transition: opacity 1s ease, transform 1s ease;
 				opacity: 1;
+				width: 90%;
+				margin: 0 auto;
 			}
 
 		.spotlights > section:nth-child(2) {
@@ -3308,15 +3311,19 @@ input, select, textarea {
 			}
 
 		.wrapper.alt {
-			background-color: #261c3e;
+			background-color: #d4d3d3;
 		}
 
 		.wrapper.style1 {
-			background-color: #2e279d;
+			/* background-color: #2e279d; */
+			background-image: url("../../images/daniel-canada-best.jpg");
+			background-size: 100% auto;
+			background-position: center 70%;
+			background-repeat: no-repeat;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #2e279d;
+			/* background-color: #2e279d; */
 		}
 
 		.wrapper.style2 {
@@ -3449,7 +3456,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: #d4d3d3;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3953,10 +3960,15 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
-		background-position: top right;
+		background-image: url("../../images/daniel-canada-best.jpg");
+		background-position: right center;;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background-size: auto 100vh;
+		min-height: 100vh;
+		/* opacity: 0; */
+		transition: .5 ease;
+
+		/* background-size: 100% auto; */
 	}
 
 		#intro p {
@@ -3968,6 +3980,10 @@ input, select, textarea {
 				#intro p br {
 					display: none;
 				}
+				
+				#intro {
+					background-position: center;
+				}
 
 			}
 
@@ -3975,6 +3991,10 @@ input, select, textarea {
 
 				#intro p {
 					font-size: 1em;
+				}
+
+				#intro {
+					background-size: auto 100%;
 				}
 
 			}
@@ -3991,8 +4011,17 @@ input, select, textarea {
 			vertical-align: bottom;
 		}
 
+		#intro > .inner {
+			font-size: 16px;
+			background-color: rgba(0, 0, 0, 0.4); /*black w/ white opacity*/
+		}
+
+		#intro > .inner > h1 {
+			font-size: 46px;
+		}
+
 		#profile-photo-wrapper {
-			float: right; 
+			/* float: right;  */
 		}
 
 		@media screen and (max-width: 736px) {
@@ -4011,10 +4040,33 @@ input, select, textarea {
 			object-fit: cover;
 		}
 
-		
+/** About me */
+
+.style4 > .inner > #aboutme {
+	width: 60%;
+}
+
+.style4 > .inner {
+		display: flex;
+		justify-content: space-between;
+}
+
+	@media screen and (max-width: 980px) {
+		.style4 > .inner {
+			justify-content: space-between;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.style4 > .inner > #aboutme {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}	
+	
 
 /* About me secton */
-.style4 > .inner > p{
+.style4 > .inner > #aboutme > p{
 	color: rgb(231, 231, 231);
 }
 
@@ -4041,4 +4093,17 @@ input, select, textarea {
 
 .style1 {
 	text-align: center;
+	color: rgb(231, 231, 231);
+}
+
+.wrapper > .inner {
+	margin: 0 auto;
+}
+
+#arrowSelect {
+	cursor: pointer;
+}
+
+.quote {
+	font-style: italic;
 }

@@ -11,8 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
-		<!-- <link href="https://fonts.googleapis.com/css?family=Overpass:400,700&display=swap" rel="stylesheet"> -->
-		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+		<link rel='stylesheet' type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Overpass:400,700&display=swap" rel="stylesheet">
+		<!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -23,7 +24,7 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#three">About Me</a></li>
+							<li><a id="aboutMeLink" href="#three">About Me</a></li>
 							<li><a href="#one">Experiences</a></li>
 							<li><a href="#two">Projects</a></li>
 							<li><a href="#four">Get in touch</a></li>
@@ -40,11 +41,12 @@
 						<div class="inner">
 							<h1>Daniel Truong</h1>
 							<p style="color: rgb(231, 231, 231);">Hi! I'm excited to see you here. Learn more about me below.</p>
+							<div class="fadeIn transition-arrow">
+								<span>Who am I?</span><br>
+								<a id="arrowSelect" style="color: white;" class="fas fa-angle-down"></a>
+							</div>
 						</div>
-						<!-- <div class="fadeIn transition-arrow">
-							<span>Who am I?</span><br>
-							<a href="#three" class="fas fa-angle-down"></a>
-						</div> -->
+
 					</section>
 					<!-- three  -->
 					<section id="three" class="wrapper style4 fade-up">
@@ -54,24 +56,32 @@
 											<img class="profile-photo" src="images/new-profile-pic.JPG"/>
 										</div>
 								</div>
-								<h2>An engineer, student, and leader.</h2>
+								<div id="aboutme">
+									<h2>A developer, student, and leader.</h2>
 
-								<p> I am a college student studying <span>Computer Science</span> at <span>University of California, San Diego</span>, graduating in June 2022. 
-									Ever since I was a kid, I'd always been in love with technology. I learned how to code 
-									during junior year of high school. And since then, I've become a Software Engineer, committed 
-									to learning as much as I can about technology, and providing others the opportunity to code by
-									running technical workshops. In my spare time, I like to play Super Smash Bros Ultimate
-									(Mario main), take lots of photos, travel, and eat tons of food with friends.
-								</p>
-								<br>
+									<p> I am a college student studying <span>Computer Science</span> at <span>University of California, San Diego</span>, graduating in June 2022. 
+										Ever since I was a kid, I'd always been in love with technology. I learned how to code 
+										during junior year of high school. And since then, I've become a Software Engineer, committed 
+										to learning as much as I can about technology, and providing others the opportunity to code by
+										running technical workshops. In my spare time, I like to play Super Smash Bros Ultimate
+										(Mario main), take lots of photos, travel, and eat tons of food with friends.
+									</p>
+									<br>
 
-								<p> I am always seeking new opportunities. Please feel free to contact me if you'd like to work 
-									together, or if you just have any questions about my experiences. </p>
-								<br>
-								<ul class="actions">
-										<li><a href="mailto:danieldtruong@yahoo.com" class="button scrolly">Email: danieldtruong@yahoo.com</a></li>
-										<li><a href="https://daniel-d-truong.github.io/resume/" class="button scrolly">Check out my resume here.</a></li>
-								</ul>	
+									<p> My belief has always been that anybody in the world is capable of making a difference. I'm always excited to meet new people, because I enjoy
+										hearing other people's experiences. This philsophy is encapsulated within one of my favorite quotes:
+									</p>
+
+									<p class="quote"> "Sometimes it is the people no one imagines anything of who do the things that no one can imagine." - Alan Turing, The Imitation Game</p>
+
+									<p> I am always seeking new opportunities. Please feel free to contact me if you'd like to work 
+										together, or if you just have any questions about my experiences. </p>
+									<br>
+									<ul class="actions">
+											<li><a href="mailto:danieldtruong@yahoo.com" class="button scrolly">Email: danieldtruong@yahoo.com</a></li>
+											<li><a href="https://daniel-d-truong.github.io/resume/" class="button scrolly">Check out my resume here.</a></li>
+									</ul>	
+								</div>
 							</div>
 						</section>
 
@@ -97,7 +107,6 @@
 							</div>
 							<div class="content">
 								<div class="inner">
-
 									<h2>Engineering Practicum Intern at Google, Summer 2019</h2>
 									<p>As an intern with the Google Admin Console Enterprise Team, I finished two projects. First, I developed several features which allowed
 										other Googlers to view and perform actions on database content, directly from the UI. Secondly, my partner and I created an error injection feature, allowing 
@@ -129,62 +138,76 @@
 
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2 style="text-align: center">Projects</h2>
+						<div style="margin: 0 auto;" class="inner">
+							<h2 style="text-align: center;">Projects</h2>
 							<p style="color: rgb(231, 231, 231); text-align: center">Here some of the many projects that I've worked throughout my journey!</p>
 							<div class="features">
 								<section>
 									<span class="icon solid major fa-mobile"></span>
-									<a href="https://github.com/daniel-d-truong/Don-t-Back-Out"><h3 class="hvr-grow hvr-shadow" >Don't Back Out</h3></a>
+									<h3 class="hvr-grow hvr-shadow" >Don't Back Out</h3>
 									<p>IOT slouch detector device which helps users fix their bad habits of bad posture, using Arduino and Android Studio.</p>
+									<ul class="actions">
+										<a href="https://github.com/daniel-d-truong/Don-t-Back-Out" class="button">View Here</a>
+									</ul>
 								</section>
 								<section>
 									<span class="icon solid major fa-compass"></span>
-									<a href="https://devpost.com/software/safemaps-qdet8f"><h3 class="hvr-grow hvr-shadow">roadblock</h3></a>
+									<h3 class="hvr-grow hvr-shadow">roadblock</h3>
 									<p>In a world where the safety of users are more and more prioritized, we created a web app which allows users to find the safest route between two locations.</p>
+									<ul class="actions">
+										<a href="https://devpost.com/software/safemaps-qdet8f" class="button">View Here</a>
+									</ul>
 								</section>
 								<section>
 									<span class="icon solid major fa-kiwi-bird"></span>
-									<a href="https://twitter.com/swansonanddogs"><h3 class="hvr-grow hvr-shadow">Ron Swanson & Dogs Twitter Bot</h3></a>
+									<h3 class="hvr-grow hvr-shadow">Ron Swanson & Dogs Twitter Bot</h3>
 									<p>Based on my love for the show, Parks and Rec, I created a Twitter Bot which would (ironically) post a quote by Ron Swanson with a picture of a cute dog.</p>
+									<ul class="actions">
+										<a href="https://twitter.com/swansonanddogs" class="button">View Here</a>
+									</ul>
 								</section>
 								<section>
 									<span class="icon solid major fa-desktop"></span>
-									<a href="https://github.com/daniel-d-truong/Flock-"><h3 class="hvr-grow hvr-shadow">Flock</h3></a>
+									<h3 class="hvr-grow hvr-shadow">Flock</h3>
 									<p>Through this app, people could find/post local events happening around them, using JavaScript and Python. This project was made during the Computer Science Summer Institute at Google.</p>
+									<ul class="actions">
+										<a href="https://github.com/daniel-d-truong/Flock-" class="button">View Here</a>
+									</ul>
 								</section>
 							</div>
 							<h3 style="text-align: center"> Interested in seeing more projects? </h3>
 							<div style="text-align: center">
-							<a  href="https://github.com/daniel-d-truong" class="button">Check out my Github!</a>
+							<a href="https://github.com/daniel-d-truong" class="button">Check out my Github!</a>
 							</div>
 						</div>
 					</section>
 
 					<!-- four  -->
 					<section id="four" class="wrapper style1 fade-up">
-							<div class="inner">
+							<div style="background-color: rgba(83, 113, 179, 0.8); width: 100%;" class="inner">
 								<h2>Get in touch with me!</h2>
 								<p>Feel free to reach out to me at any time and I'll get back to you as soon as possible.</p>
-									<ul class="icons">
-										<li><a href="https://www.linkedin.com/in/daniel-d-truong/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="mailto:danieldtruong@yahoo.com" class="icon fa-envelope"><span class="label">Mail</span></a></li>
-										<li><a href="https://github.com/daniel-d-truong" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/daniel-d-truong/" class="icon major brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+									<li><a href="mailto:danieldtruong@yahoo.com" class="icon major fa-envelope"><span class="label">Mail</span></a></li>
+									<li><a href="https://github.com/daniel-d-truong" class="icon major brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+
+								<ul class="menu" style="text-align: center" >
+									<li style="color: rgb(231, 231, 231); font-size: 15px;">&copy; Daniel Truong</li>
+								</ul>
 							</div>
-						</section>				
-
-
+					</section>				
 			</div>
 
-		<!-- Footer -->
+		<!-- Footer
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu" style="text-align: center" >
-						<li style="color: rgb(231, 231, 231);">&copy; Daniel Truong</li>
+						<li style="color: rgb(231, 231, 231); font-size: 15px;">&copy; Daniel Truong</li>
 					</ul>
 				</div>
-			</footer>
+			</footer> -->
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -194,6 +217,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/media-queries/clickSidebar.js"></script>
 	</body>
 </html>
