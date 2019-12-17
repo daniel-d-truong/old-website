@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background-color: #d4d3d3;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -116,7 +116,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.55);
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: 'Overpass', Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -2777,7 +2777,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 736px) {
 
 			ul.actions:not(.fixed) {
 				-moz-flex-direction: column;
@@ -2850,6 +2850,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		text-align: center;
 	}
 
 		ul.icons li {
@@ -3127,6 +3128,19 @@ input, select, textarea {
 			opacity: 0;
 		}
 
+		/* Logo stuff */
+		.spotlights > section > .logo-wrapper > .logo {
+			width: auto;
+			height: 200px;
+			margin-top: 40%;
+			border-radius: 20%;
+		}
+
+		.spotlights > section > .logo-wrapper {
+			margin-left: 5%;
+		}
+
+
 		@media screen and (max-width: 1680px) {
 
 			.spotlights > section > .content {
@@ -3158,6 +3172,14 @@ input, select, textarea {
 					transform: translateY(1em);
 				}
 
+				.spotlights > section > .logo-wrapper{
+					text-align: center;
+				}
+
+				.spotlights > section > .logo-wrapper > .logo{
+					margin-top: 40px;
+				}
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3170,11 +3192,16 @@ input, select, textarea {
 			.spotlights > section > .content {
 				padding: 3em 2em 1em 2em ;
 			}
+
 		}
-		
+
+		.spotlights > section > .content > .inner > h2 {
+			text-align: center;
+		}		
 		.spotlights > section > .content > .inner > p{
 			color: rgb(231, 231, 231);
 		}
+
 
 /* Table */
 
@@ -3309,10 +3336,10 @@ input, select, textarea {
 		}
 
 		.wrapper.style4 {
-			background-color: #2e279d;
+			background-color: #46b3e6;
 		}
 		.wrapper.style4-alt {
-			background-color: #2e279d;
+			background-color: #46b3e6;
 		}
 
 		.wrapper.fullscreen {
@@ -3960,10 +3987,22 @@ input, select, textarea {
 
 		}
 
-		#profile-photo-wrapper {
-			text-align: center;
-			float: right;
+		#intro > .transition-arrow {
+			vertical-align: bottom;
 		}
+
+		#profile-photo-wrapper {
+			float: right; 
+		}
+
+		@media screen and (max-width: 736px) {
+			#profile-photo-wrapper {
+				float: none;
+				text-align: center;
+			}
+		} 
+
+
 
 		img.profile-photo {
 		    height: 250px;
@@ -3981,4 +4020,25 @@ input, select, textarea {
 
 .style4 > .inner > p > span{
 	text-decoration: underline;
+}
+
+.style4 > .inner > p, h2, ul{
+	margin-left: -20px;
+}
+
+	@media screen and (max-width: 736px) {
+		.style4 > .inner{
+			margin-left: 0px;
+			text-align: center;
+		}
+
+		.style4 > .inner > p, ul{
+			text-align: left;
+			margin-left: 3px;
+		}
+
+	}
+
+.style1 {
+	text-align: center;
 }
