@@ -3965,11 +3965,29 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-size: auto 110vh;
 		min-height: 100vh;
-		/* opacity: 0; */
-		transition: .5 ease;
+		opacity: 0;
+		-webkit-animation: myfirst 2s ; /* Chrome, Safari, Opera */
+		animation: myfirst 2s;
 
 		/* background-size: 100% auto; */
 	}
+
+	#intro.visible {
+		opacity: 1;
+	}
+
+
+  /* Chrome, Safari, Opera */
+  @-webkit-keyframes myfirst {
+    from {opacity: 0.0;}
+    to {opacity: 1;}
+  }
+
+  /* Standard syntax */
+  @keyframes myfirst {
+    from {opacity: 0.0;}
+	to {opacity: 1;}
+  }
 
 		#intro p {
 			font-size: 1.25em;
@@ -4084,7 +4102,7 @@ input, select, textarea {
 			text-align: center;
 		}
 
-		.style4 > .inner > p, ul{
+		.style4 > .inner > #aboutme > p, ul{
 			text-align: left;
 			margin-left: 3px;
 		}
