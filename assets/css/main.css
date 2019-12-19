@@ -3177,6 +3177,7 @@ input, select, textarea {
 
 				.spotlights > section > .logo-wrapper{
 					text-align: center;
+					margin-left: 0%;
 				}
 
 				.spotlights > section > .logo-wrapper > .logo{
