@@ -3994,6 +3994,31 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
+		@media screen and (min-width: 1200px) {
+
+			#intro {
+				background-size: 100% auto;
+			}
+
+		}
+
+		@media screen and (min-width: 1280px) {
+
+			#intro {
+				background-size: auto 110vh;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#intro {
+				background-attachment: scroll;
+				/* background-size: 100% auto; */
+			}
+
+		}
+
 			@media screen and (max-width: 1024px) {
 
 				#intro p br {
@@ -4017,14 +4042,6 @@ input, select, textarea {
 				}
 
 			}
-
-		@media screen and (max-width: 1280px) {
-
-			#intro {
-				background-attachment: scroll;
-			}
-
-		}
 
 		#intro > .transition-arrow {
 			vertical-align: bottom;
