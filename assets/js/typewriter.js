@@ -14,7 +14,7 @@ async function typeWriter() {
     ];
     for (let word in descriptions) {
             let totalWord = `${name}, ${descriptions[word]}`;
-            console.log(totalWord)
+
             // Typing the word
             for (let i = name.length; i < totalWord.length; i++) {
                 typerwriterEl.innerHTML += totalWord[i];
